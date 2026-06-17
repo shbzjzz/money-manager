@@ -1,5 +1,7 @@
 package com.wealthflow.app.presentation.addtransaction
 
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -179,8 +181,8 @@ private fun SelectorRow(icon: androidx.compose.ui.graphics.vector.ImageVector, l
 
 @Composable
 private fun <T> LazyColumnPicker(items: List<Pair<String, T>>, onPick: (T) -> Unit) {
-    androidx.compose.foundation.lazy.LazyColumn(Modifier.padding(16.dp).fillMaxWidth()) {
-        androidx.compose.foundation.lazy.items(items) { (label, value) ->
+    LazyColumn(Modifier.padding(16.dp).fillMaxWidth()) {
+        items(items) { (label, value) ->
             Text(
                 label,
                 modifier = Modifier.fillMaxWidth().clickableNoRipple { onPick(value) }.padding(vertical = 14.dp),
