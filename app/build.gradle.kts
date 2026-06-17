@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
         // Cloudflare Worker base URL - change to your deployed worker
-        buildConfigField("String", "API_BASE_URL", "\"https://expiry-api.gala-it1.workers.dev/\"")
+        buildConfigField("String", "API_BASE_URL", "\"https://wealthflow-api.shabeershz21.workers.dev/\"")
     }
 
     buildFeatures {
